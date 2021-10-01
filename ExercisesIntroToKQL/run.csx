@@ -8,6 +8,7 @@ using Newtonsoft.Json.Converters;
 using System.Linq;
 
 string storageAccountName = Environment.GetEnvironmentVariable("StorageAccountName");
+string storageAccountContainerName = Environment.GetEnvironmentVariable("StorageContainerName");
 
 public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 {
@@ -55,7 +56,7 @@ private static async Task<string> GetBlob()
 
     using(System.Net.WebClient c = new System.Net.WebClient())
     {
-        exercises = c.DownloadString("https://{storageAccountName}.blob.core.windows.net/filter/Exercises.csv");
+        exercises = c.DownloadString($"https://{storageAccountName}.blob.core.windows.net/{storageAccountContainerName}/Exercises.csv");
     }
 
     return exercises;
@@ -67,7 +68,7 @@ private static async Task<string> GetBlob(string Tab, string Section)
 
     using(System.Net.WebClient c = new System.Net.WebClient())
     {
-        exercises = c.DownloadString($"https://{storageAccountName}.blob.core.windows.net/filter/{Tab}/{Section}.csv");
+        exercises = c.DownloadString($"https://{storageAccountName}.blob.core.windows.net/{storageAccountContainerName}/{Tab}/{Section}.csv");
     }
 
     return exercises;

@@ -11,6 +11,7 @@ using Newtonsoft.Json.Converters;
 
 private static ILogger defaultLog = null;
 string storageAccountName = Environment.GetEnvironmentVariable("StorageAccountName");
+string storageAccountContainerName = Environment.GetEnvironmentVariable("StorageContainerName");
 
 public static async Task<IActionResult> Run(HttpRequest req, ILogger log)
 {
@@ -165,7 +166,7 @@ private static async Task<string> GetBlob()
     using(System.Net.WebClient c = new System.Net.WebClient())
     {
         defaultLog.LogInformation("2");
-        exercises = c.DownloadString("https://{storageAccountName}.blob.core.windows.net/filter/Exercises.csv");
+        exercises = c.DownloadString($"https://{storageAccountName}.blob.core.windows.net/{storageAccountContainerName}/Exercises.csv");
     }
     return exercises;
 }
@@ -176,7 +177,7 @@ private static async Task<string> GetBlob(string Tab, string Section)
     using(System.Net.WebClient c = new System.Net.WebClient())
     {
         defaultLog.LogInformation("3");
-        exercises = c.DownloadString($"https://{storageAccountName}.blob.core.windows.net/filter/{Tab}/{Section}.csv");
+        exercises = c.DownloadString($"https://{storageAccountName}.blob.core.windows.net/{storageAccountContainerName}/{Tab}/{Section}.csv");
     }
     return exercises;
 }
