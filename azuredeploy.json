@@ -36,7 +36,8 @@
   },
   "variables": {
     "FunctionName": "[concat(toLower(parameters('FunctionName')), uniqueString(resourceGroup().id))]",
-	"StorageAccountName":"[concat(substring(variables('FunctionName'), 0, 20), 'sa')]",    
+	"StorageAccountName":"[concat(substring(variables('FunctionName'), 0, 20), 'sa')]",
+	"StorageContainerName": "kqltopics",
 	"KeyVaultName": "[concat(substring(variables('FunctionName'), 0, 20), 'kv')]",           
     "ClientSecret": "ClientSecret",    
 	"StorageSuffix":"[environment().suffixes.storage]"    
@@ -265,6 +266,18 @@
         "publicAccess": "None"
       }
     },    
+	{
+      "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+      "apiVersion": "2019-06-01",
+      "name": "[concat(variables('StorageAccountName'), concat('/default/', variables('StorageContainerName')))]",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts/blobServices', variables('StorageAccountName'), 'default')]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('StorageAccountName'))]"
+      ],
+      "properties": {
+        "publicAccess": "None"
+      }
+    },
     {
       "type": "Microsoft.Storage/storageAccounts/fileServices/shares",
       "apiVersion": "2019-06-01",
