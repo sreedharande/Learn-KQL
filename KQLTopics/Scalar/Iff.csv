@@ -1,0 +1,2 @@
+﻿Name,,,Question,,,Query
+IffEx1,,,Classify events as high severity if an audit log was cleared,,,Mordor | extend Classification = iff(Message has 'audit log was cleared', 'High Severity', 'Potentially medium severity')

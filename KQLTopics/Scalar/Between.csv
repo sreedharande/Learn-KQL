@@ -1,0 +1,3 @@
+Name,,,Question,,,Query
+BetweenEx1,,,Return rows from the Weather table with a Low between 20 and 22,,,Weather | where Low between(20...22)
+BetweenEx2,,,Return rows from the Weather table with Rain between 0.8 and 1,,,Weather | where Rain between(0.8..1)

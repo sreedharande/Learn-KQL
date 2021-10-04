@@ -1,0 +1,3 @@
+﻿Name,,,Question,,,Query
+CaseEx1,,,Classify the temperatures based on their feeling,,,Weather | extend Feeling = case(High < 80, 'nice',  High > 80, 'hot', 'nice')
+

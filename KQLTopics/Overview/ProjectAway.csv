@@ -1,0 +1,3 @@
+Name,,,Question,,,Query
+ProjectAwayEx1,,,Return all records excluding the High column from the Weather table,,,Weather | project-away High
+ProjectAwayEx2,,,Return all records excluding the High and Rain columns from the Weather table,,,Weather | project-away High, Rain

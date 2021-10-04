@@ -1,0 +1,2 @@
+Name,,,Question,,,Query
+HasEx1,,,Return all records from the Weather table that have the word "cleared" in the Message column,,,Mordor | where Message has "cleared"

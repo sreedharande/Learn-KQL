@@ -1,0 +1,4 @@
+Name,,,Question,,,Query
+TakeEx1,,,Return 1 row from the Weather table in the default order,,,Weather | take 1
+TakeEx2,,,Return 6 rows from the Weather table in the default order,,,Weather | take 6
+TakeEx3,,,Return 10 rows from the Weather table in the default order,,,Weather | take 10

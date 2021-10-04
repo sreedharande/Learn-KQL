@@ -1,0 +1,2 @@
+﻿Name,,,Question,,,Query
+DatatableEx1,,,Create a datatable for cities of your choice,,,let Secondary = datatable(Low: real, High: real, Rainfall: real, Location:string) 67,85,'.3',"Chicago", 65,87,'.1',"Minneapolis", 69,84,'.12',"Boston"];

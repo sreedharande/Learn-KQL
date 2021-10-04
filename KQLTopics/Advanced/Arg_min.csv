@@ -1,0 +1,3 @@
+Name,,,Question,,,Query
+ArgMinEx1,,,Return the records from each Location with the lowest High temperature for that Location ordered ordered by High from lowest to highest,,,Weather | summarize arg_min(High,*) by Location | order by High asc
+ArgMinEx2,,,Return the High and Low temperatures from each Location with the lowest High temperature for that Location ordered by High from lowest to highest,,,Weather | summarize arg_min(High,Low) by Location | order by High asc

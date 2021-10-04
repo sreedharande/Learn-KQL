@@ -1,0 +1,2 @@
+﻿Name,,,Question,,,Query
+DcountEx1,,,Return the estimate for Low temps by City,,,Weather | summarize Lows = dcount(Low) by Location

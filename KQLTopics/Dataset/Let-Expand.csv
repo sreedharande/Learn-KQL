@@ -1,0 +1,2 @@
+﻿Name,,,Question,,,Query
+LetEx1,,,Create a list of cities, only return results for cities that are within the list,,,let Events = datatable (EventID: string) [    '4624',    '4625',    '4626',    '1001'];SecurityEvent| where EventID in (Events)

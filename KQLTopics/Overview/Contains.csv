@@ -1,0 +1,2 @@
+Name,,,Question,,,Query
+ContainsEx1,,,Return records from the Weather table with Locations that have the letter "s" in them,,,Weather | where Location contains "s"

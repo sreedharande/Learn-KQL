@@ -1,0 +1,5 @@
+﻿Name,,,Question,,,Query
+JoinEx1,,,Join data from your custom table with the built in weather table,,,let Secondary = datatable(Low: real, High: real, Rain: real, Location:string) 67,85,'.3',"Chicago", 65,87,'.1',"Minneapolis", 69,84,'.12',"Boston"];
+Weather
+| join Secondary on $left.Low == $right.Low
+

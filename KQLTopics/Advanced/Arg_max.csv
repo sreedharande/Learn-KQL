@@ -1,0 +1,3 @@
+Name,,,Question,,,Query
+ArgMaxEx1,,,Return the records from each Location with the most Rain for that Location sorted from most Rain to least,,,Weather | summarize arg_max(Rain,*) by Location | order by Rain desc
+ArgMaxEx2,,,Return the amount of Rain and TimeGenerated from each Location with the most Rain for that Location sorted from most Rain to least,,,Weather | summarize arg_max(Rain,TimeGenerated) by Location | order by Rain desc

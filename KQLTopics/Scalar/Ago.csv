@@ -1,0 +1,3 @@
+Name,,,Question,,,Query
+AgoEx1,,,Return all results from within the last 2 days,,,Mordor | where TimeGenerated >= ago(2d)
+AgoEx2,,,Return all results from more than 6 days ago,,,Mordor | where TimeGenerated <= ago(6d)

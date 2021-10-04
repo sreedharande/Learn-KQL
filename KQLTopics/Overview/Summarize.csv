@@ -1,0 +1,6 @@
+Name,,,Question,,,Query
+SummarizeEx1,,,Return the number of distinct High temperatures found in the Weather table,,,Weather | summarize dcount(High)
+SummarizeEx2,,,Return the number of rows with rainfall in the Weather table and the total rainfall accumulation,,,Weather | summarize dcount(Rain),sum(Rain)
+SummarizeEx3,,,Return a summary of Locations from the Weather table in descending order of Location,,,Weather | summarize by Location | order by Location desc
+SummarizeEx4,,,Return a summary of the total number of rows with rainfall,,,Weather | summarize countif(Rain > 0)
+SummarizeEx5,,,Return the number of times each High has occurred per Location both in ascending order from the Weather table,,,Weather | summarize count() by Location,High | order by Location asc,High asc

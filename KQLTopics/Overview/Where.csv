@@ -1,0 +1,3 @@
+Name,,,Question,,,Query
+WhereEx1,,,Return the newest row from Seattle in the Weather table,,,Weather | where Location == "Philadelphia" | top 1 by TimeGenerated desc
+WhereEx2,,,Return the oldest row from Seattle in the Weather table,,,Weather | where Location == 'Seattle' | top 1 by TimeGenerated asc
