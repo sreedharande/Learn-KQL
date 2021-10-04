@@ -190,7 +190,7 @@
 			"WorkspaceId": "[parameters('WorkspaceId')]",
 			"StorageAccountName": "[variables('StorageAccountName')]",
 			"StorageContainerName": "[variables('StorageContainerName')]",
-            "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/sreedharande/LearnKQL/blob/main/LearnKQL.zip?raw=true"
+            "WEBSITE_RUN_FROM_PACKAGE": "https://github.com/sreedharande/Learn-KQL/blob/main/LearnKQL.zip?raw=true"
           }
         }
       ]      
